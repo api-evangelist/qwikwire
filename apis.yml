@@ -1,7 +1,17 @@
 aid: qwikwire
 name: Qwikwire
-description: Qwikwire is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Qwikwire, now operating as Aqwire, is a Philippine-founded cross-border
+  payments company backed by 500 Global that bridges international payers with
+  Philippine recipients, with a primary focus on the real estate sector.
+  The platform lets overseas home buyers and investors pay property developers
+  in multiple currencies while handling collection, reconciliation, and delivery
+  of Philippine pesos to local bank accounts. Aqwire for Enterprise provides a
+  payment dashboard for creating payment links, tracking transactions in real
+  time, running auto-debit enrollments, and receiving daily automated reports,
+  plus the Aqwire Connect (Access) API so merchants can integrate payment
+  transaction creation into their own applications. This profile was surfaced as
+  a portfolio company of 500 Global and enriched by the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/qwikwire/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +19,76 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://aqwire.io/assets/logo-brand.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Payments
+- Cross-Border Payments
+- Real Estate
+- FinTech
+- Philippines
+- Multi-Currency
+- Remittance
+apis:
+- name: Aqwire Connect API
+  description: >-
+    The Aqwire Connect (Access) API is a developer-facing payments API that lets
+    merchants integrate their application with Aqwire to create cross-border
+    payment transactions. The reference documentation is published at
+    developers.aqwire.io and is currently password-protected; the production API
+    host at api.aqwire.io responds with a structured JSON error envelope
+    (code/message/title). No public OpenAPI specification is available.
+  humanURL: https://developers.aqwire.io
+  baseURL: https://api.aqwire.io
+  properties:
+  - type: APIReference
+    url: https://developers.aqwire.io
+  - type: DeveloperPortal
+    url: https://developers.aqwire.io
+  - type: ErrorCatalog
+    url: errors/qwikwire-problem-types.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 2
+  pass: local-v1
 common:
+- type: DomainSecurity
+  url: security/qwikwire-domain-security.yml
 - type: Website
-  url: https://qwikwire.com
+  url: https://aqwire.io
+- type: DeveloperPortal
+  url: https://developers.aqwire.io
+- type: APIReference
+  url: https://developers.aqwire.io
+- type: SignUp
+  url: https://app.aqwire.io
+- type: Login
+  url: https://app.aqwire.io
+- type: Support
+  url: https://aqwire.zohodesk.com/portal/en/home
+- type: HelpCenter
+  url: https://aqwire.zohodesk.com/portal/en/home
+- type: TermsOfService
+  url: https://aqwire.co/terms-of-service/
+- type: PrivacyPolicy
+  url: https://aqwire.co/privacy-policy/

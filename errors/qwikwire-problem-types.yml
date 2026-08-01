@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Live probe of the Aqwire Connect API host https://api.aqwire.io (HTTP responses
+  observed 2026-07-20). No public OpenAPI specification or error reference is
+  available; the developer documentation at https://developers.aqwire.io is
+  password-protected. Only the error envelope and status codes actually returned
+  by the live host are recorded here.
+name: Aqwire Connect API Error Catalog
+api: Aqwire Connect API
+host: https://api.aqwire.io
+format: custom-json
+media_type: application/json
+notes: >-
+  Errors are NOT RFC 9457 problem+json. The observed envelope is a flat JSON
+  object with a numeric application code, a human-readable message, and a short
+  title. Content-Type on error responses is application/json.
+envelope:
+  fields:
+  - name: code
+    type: integer
+    description: Aqwire application-level error code (distinct from the HTTP status code).
+  - name: message
+    type: string
+    description: Human-readable explanation of the error.
+  - name: title
+    type: string
+    description: Short reason phrase, mirroring the HTTP status reason.
+  example: |
+    {"code":10004,"message":"This API you are looking for does not exist.","title":"Not Found"}
+problem_types:
+- code: 10004
+  http_status: 404
+  title: Not Found
+  message: This API you are looking for does not exist.
+  remediation: >-
+    Verify the request path and API version; the requested resource/route does
+    not exist on api.aqwire.io.
+  observed: true
