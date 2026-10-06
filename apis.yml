@@ -44,7 +44,7 @@ accessModel:
 image: https://aqwire.io/assets/logo-brand.png
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-10-06'
 tags:
 - Company
 - Payments
@@ -93,6 +93,8 @@ x-enrichment:
   artifacts_added: 2
   pass: local-v1
 common:
+- url: https://aqwire.co/news/
+  type: Blog
 - type: DomainSecurity
   url: security/qwikwire-domain-security.yml
 - type: Website
